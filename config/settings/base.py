@@ -39,7 +39,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='postgres://localhost/pracgram'),
+    'default': env.db('DATABASE_URL', default='postgres://localhost/pracgrams'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
@@ -63,14 +63,14 @@ DJANGO_APPS = [
     'django.contrib.admin',
 ]
 THIRD_PARTY_APPS = [
-    'crispy_forms',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'rest_framework',
 ]
 LOCAL_APPS = [
     'pracgram.users.apps.UsersConfig',
+    'pracgram.images.apps.ImagesConfig',
+
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
