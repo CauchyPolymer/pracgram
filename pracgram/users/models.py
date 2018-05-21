@@ -18,6 +18,7 @@ class User(AbstractUser):
     gender = models.CharField(max_length=80, choices=GENDER_CHOICES, null=True)
     followers = models.ManyToManyField("self")
     following = models.ManyToManyField("self")
+
     def __str__(self):
         return self.username
 
